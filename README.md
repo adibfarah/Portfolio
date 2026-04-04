@@ -1,11 +1,32 @@
-<div align="center">
+# Adib Farah - Portfolio
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Welcome to my interactive portfolio! I am a **Unity Team Lead & AI Engineer** blending creativity with advanced technology to build immersive game experiences and cutting-edge AI solutions.
 
-  <h1>Built with AI Studio</h2>
+## About Me
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+I specialize in creating highly interactive and visually stunning applications. My work spans across game development, artificial intelligence, virtual reality (VR), augmented reality (AR), and advanced simulation systems. 
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+From high-fidelity Formula 1 racing simulators to AI-powered photobooths and interactive museum exhibits, I focus on pushing the boundaries of what's possible with modern technology to deliver engaging user experiences.
 
-</div>
+## Featured Projects
+
+My portfolio showcases a wide variety of interactive projects, including:
+- **Logistics Manager:** A 3D simulation and management game.
+- **Trickshot Star:** A 2D physics-based football game.
+- **Realistic AI Assistant:** A realistic AI avatar responding to user questions.
+- **AI Photobooth:** An AI-generated photo experience based on selected themes.
+- **Aramco Mobile App:** An enterprise-grade mobile application developed for Aramco.
+- **STC Forward Museum:** A futuristic museum experience showcasing the evolution of technology.
+- **Comic Con Avatar Hero Creator:** An interactive avatar creation experience for Comic Con events.
+- **F1 Simulator:** A high-fidelity Formula 1 racing simulator with realistic physics.
+- ...and many more AI, VR, and AR experiences.
+
+## Portfolio Preview
+
+Here is a glimpse of my interactive portfolio homepage:
+
+![Adib Farah Portfolio Screenshot](https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1000&auto=format&fit=crop) 
+*(Note: You can replace this placeholder image with an actual screenshot of your website by uploading your screenshot to your repository and updating this image link!)*
+
+---
+*Feel free to explore the live portfolio to see the 3D interactive background and project videos in action!*
