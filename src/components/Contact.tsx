@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Send, MessageSquare, Sparkles, Linkedin, Github, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, MessageSquare, Sparkles, Linkedin, Github } from 'lucide-react';
 
 export default function Contact() {
   return (
@@ -68,14 +68,11 @@ export default function Contact() {
             <div className="pt-10 space-y-4">
               <div className="text-xs font-bold text-gray-500 uppercase tracking-widest">Follow Me</div>
               <div className="flex items-center gap-4">
-                <a href="#" className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-indigo-600 transition-all">
+                <a href="https://www.linkedin.com/in/adibfarah5/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-indigo-600 transition-all">
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="#" className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-indigo-600 transition-all">
+                <a href="https://github.com/adibfarah" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-indigo-600 transition-all">
                   <Github className="w-5 h-5" />
-                </a>
-                <a href="#" className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-indigo-600 transition-all">
-                  <Twitter className="w-5 h-5" />
                 </a>
               </div>
             </div>
