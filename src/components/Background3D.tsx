@@ -59,7 +59,7 @@ export default function Background3D() {
       )}
       <video
         ref={videoRef}
-        src="https://res.cloudinary.com/dtmk93enn/video/upload/v1775341062/output_hlk9n5.mp4"
+        src="https://res.cloudinary.com/dtmk93enn/video/upload/output_r8btnv.mp4"
         crossOrigin="anonymous"
         className="w-full h-full object-cover opacity-50"
         muted
