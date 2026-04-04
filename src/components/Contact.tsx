@@ -1,7 +1,41 @@
+import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Mail, Phone, MapPin, Send, MessageSquare, Sparkles, Linkedin, Github } from 'lucide-react';
 
 export default function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    const formData = new FormData(e.currentTarget);
+    // TODO: Replace this with your Web3Forms access key
+    formData.append("access_key", "0b795619-5d7a-4acf-b878-fe21ba025b0d");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitStatus('success');
+        e.currentTarget.reset();
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-24 bg-black/40 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
@@ -87,13 +121,15 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="p-10 bg-white/5 border border-white/10 rounded-[40px] backdrop-blur-md space-y-6"
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={handleSubmit}
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-gray-500 uppercase tracking-widest ml-1">Name</label>
                   <input
                     type="text"
+                    name="name"
+                    required
                     placeholder="John Doe"
                     className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder:text-gray-600 focus:outline-none focus:border-indigo-500 transition-colors"
                   />
@@ -102,6 +138,8 @@ export default function Contact() {
                   <label className="text-xs font-bold text-gray-500 uppercase tracking-widest ml-1">Email</label>
                   <input
                     type="email"
+                    name="email"
+                    required
                     placeholder="john@example.com"
                     className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder:text-gray-600 focus:outline-none focus:border-indigo-500 transition-colors"
                   />
@@ -112,6 +150,8 @@ export default function Contact() {
                 <label className="text-xs font-bold text-gray-500 uppercase tracking-widest ml-1">Subject</label>
                 <input
                   type="text"
+                  name="subject"
+                  required
                   placeholder="Project Inquiry"
                   className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder:text-gray-600 focus:outline-none focus:border-indigo-500 transition-colors"
                 />
@@ -121,6 +161,8 @@ export default function Contact() {
                 <label className="text-xs font-bold text-gray-500 uppercase tracking-widest ml-1">Message</label>
                 <textarea
                   rows={5}
+                  name="message"
+                  required
                   placeholder="Tell me about your project..."
                   className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder:text-gray-600 focus:outline-none focus:border-indigo-500 transition-colors resize-none"
                 />
@@ -129,11 +171,30 @@ export default function Contact() {
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full py-5 bg-indigo-600 text-white rounded-2xl font-black text-lg shadow-xl hover:bg-indigo-500 transition-all flex items-center justify-center gap-3"
+                disabled={isSubmitting}
+                className="w-full py-5 bg-indigo-600 text-white rounded-2xl font-black text-lg shadow-xl hover:bg-indigo-500 transition-all flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                <Send className="w-5 h-5" />
-                Send Message
+                {isSubmitting ? (
+                  <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                ) : (
+                  <>
+                    <Send className="w-5 h-5" />
+                    Send Message
+                  </>
+                )}
               </motion.button>
+
+              {submitStatus === 'success' && (
+                <div className="p-4 bg-green-500/10 border border-green-500/20 rounded-2xl text-green-400 text-sm text-center font-bold">
+                  Message sent successfully! I'll get back to you soon.
+                </div>
+              )}
+              
+              {submitStatus === 'error' && (
+                <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-2xl text-red-400 text-sm text-center font-bold">
+                  Something went wrong. Please try again or email me directly.
+                </div>
+              )}
 
               <div className="flex items-center justify-center gap-2 text-gray-500 text-xs font-bold uppercase tracking-widest pt-4">
                 <Sparkles className="w-4 h-4 text-indigo-500" />
