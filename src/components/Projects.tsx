@@ -17,6 +17,16 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: 'Smart Building VR',
+    description: 'An immersive virtual reality experience showcasing modern interior design and interactive smart home appliances.',
+    fullDescription: 'A highly interactive VR experience built for the Oculus Quest 3. Users can explore a beautifully designed interior space and interact with various smart home appliances using advanced hand tracking technology. The project demonstrates the potential of VR for architectural visualization and smart home control.',
+    features: ['Oculus Quest 3 Integration', 'Advanced Hand Tracking', 'Interactive Smart Appliances', 'High-Fidelity Interior Design'],
+    icon: <Glasses className="w-6 h-6" />,
+    tags: ['Unity VR', 'Oculus Quest 3', 'Hand Tracking'],
+    color: 'from-cyan-500 to-blue-500',
+    videoUrl: 'https://drive.google.com/file/d/1v-Kan2QNZkW2cBmaJu4Ubu8dDkH6LuZC/preview',
+  },
+  {
     title: 'Logistics Manager',
     description: 'A 3D simulation and management game for overseeing a bustling logistics hub.',
     fullDescription: 'A strategic 3D simulation game where players manage a complex logistics network. The core gameplay involves strategically assigning trucks and cargo ships to specific ports, managing supply chains, and optimizing routing to ensure efficient delivery operations under time constraints.',
