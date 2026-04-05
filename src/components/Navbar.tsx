@@ -56,7 +56,7 @@ export default function Navbar() {
             </motion.a>
           ))}
           <motion.a
-            href="/Adib_Farah_CV.pdf"
+            href="./Adib_Farah_CV.pdf"
             download="Adib_Farah_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
@@ -98,7 +98,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="/Adib_Farah_CV.pdf"
+                href="./Adib_Farah_CV.pdf"
                 download="Adib_Farah_CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
