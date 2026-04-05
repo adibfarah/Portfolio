@@ -1,4 +1,4 @@
-# Adib Farah - Portfolio
+# Adib Farah - [Portfolio](https://adibfarah.github.io/Portfolio)
 
 Welcome to my interactive portfolio! I am a **Unity Team Lead & AI Engineer** blending creativity with advanced technology to build immersive game experiences and cutting-edge AI solutions.
 
@@ -25,8 +25,7 @@ My portfolio showcases a wide variety of interactive projects, including:
 
 Here is a glimpse of my interactive portfolio homepage:
 
-![Adib Farah Portfolio Screenshot](https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1000&auto=format&fit=crop) 
-*(Note: You can replace this placeholder image with an actual screenshot of your website by uploading your screenshot to your repository and updating this image link!)*
+![Adib Farah Portfolio Screenshot](https://github.com/adibfarah/Portfolio/blob/main/Protfolio.png) 
 
 ---
 *Feel free to explore the live portfolio to see the 3D interactive background and project videos in action!*
