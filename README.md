@@ -25,7 +25,7 @@ My portfolio showcases a wide variety of interactive projects, including:
 
 Here is a glimpse of my interactive portfolio homepage:
 
-![Adib Farah Portfolio Screenshot](https://github.com/adibfarah/Portfolio/blob/main/Protfolio.png) 
+![Adib Farah Portfolio Screenshot](https://github.com/adibfarah/Portfolio/blob/main/public/Protfolio.png) 
 
 ---
 *Feel free to explore the live portfolio to see the 3D interactive background and project videos in action!*
