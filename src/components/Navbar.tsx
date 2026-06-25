@@ -56,8 +56,7 @@ export default function Navbar() {
             </motion.a>
           ))}
           <motion.a
-            href="./Adib_Farah_CV.pdf"
-            download="Adib_Farah_CV.pdf"
+            href="https://drive.google.com/file/d/1AVG-GCqFRLytTvzRXdIS0FI4eKY7J1pc/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -98,8 +97,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="./Adib_Farah_CV.pdf"
-                download="Adib_Farah_CV.pdf"
+                href="https://drive.google.com/file/d/1AVG-GCqFRLytTvzRXdIS0FI4eKY7J1pc/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-3 bg-indigo-600 text-white rounded-xl text-center font-bold"
