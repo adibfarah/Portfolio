@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ExternalLink, Gamepad2, Cpu, Eye, Box, Trophy, Zap, Layers, Code2, Monitor, Smartphone, Glasses, Music, Layout, Car, Users, ShieldCheck, X, CheckCircle2, Sparkles, PlayCircle, Camera, PenTool, Video, Bot, UserCircle, Clock, Mic, Volume2, Brush, Move, Activity } from 'lucide-react';
+import { ExternalLink, Gamepad2, Cpu, Eye, Box, Trophy, Zap, Layers, Code2, Monitor, Smartphone, Glasses, Music, Layout, Car, Users, ShieldCheck, X, CheckCircle2, Sparkles, PlayCircle, Camera, PenTool, Video, Bot, UserCircle, Clock, Mic, Volume2, Brush, Move, Activity, Plane } from 'lucide-react';
 import { cn } from '@/src/lib/utils';
 
 interface Project {
@@ -12,10 +12,26 @@ interface Project {
   tags: string[];
   color: string;
   videoUrl: string;
+  videoUrls?: string[];
   images?: string[];
+  thumbnail?: string;
 }
 
 const projects: Project[] = [
+  {
+    title: 'Target Destroyed Shooting Simulator',
+    description: 'A military jet simulator where you defend airspace using machine guns and rockets, featuring automatic thermal camera tracking and post-game play recording.',
+    fullDescription: 'An intense, action-packed flight simulation game. Players take control of a jet fighter to defend the airspace from hostile drone invasions. The game automatically shifts to a high-tech thermal camera feed to target and lock onto enemies, enabling players to unleash devastation using heavy machine guns and precise rocket launchers. Upon victory or completion, the simulator features a built-in gameplay recorder, allowing players to capture and save a personalized video recording of their flight session.',
+    features: ['High-speed Jet Flight Simulation', 'Automatic Thermal Camera Shift & Targeting', 'Machine Gun & Rocket Combat Systems', 'Built-in Gameplay Video Recording & Playback'],
+    icon: <Plane className="w-6 h-6" />,
+    tags: ['Unity', 'Simulation', 'Flight Simulator', 'Combat'],
+    color: 'from-rose-700 to-zinc-900',
+    videoUrl: 'https://drive.google.com/file/d/1Qhkb2r8BR9M8GdcbomcOOOjRnNeKgbbS/preview',
+    videoUrls: [
+      'https://drive.google.com/file/d/1Qhkb2r8BR9M8GdcbomcOOOjRnNeKgbbS/preview',
+      'https://drive.google.com/file/d/1oD-AtMe6xSB9wuLtf6bPIpajAG2KXjqi/preview'
+    ],
+  },
   {
     title: 'Smart Building VR',
     description: 'An immersive virtual reality experience showcasing modern interior design and interactive smart home appliances.',
@@ -322,38 +338,60 @@ export default function Projects() {
               transition={{ delay: i * 0.1 }}
               whileHover={{ y: -10 }}
               onClick={() => setSelectedProject(project)}
-              className="group relative bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-300 cursor-pointer flex flex-col h-full"
+              className="group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:bg-white/10 transition-all duration-300 cursor-pointer flex flex-col h-full"
             >
-              <div className={cn(
-                "w-14 h-14 rounded-2xl bg-gradient-to-br flex items-center justify-center text-white mb-6 shadow-lg shrink-0",
-                project.color
-              )}>
-                {project.icon}
-              </div>
+              {project.thumbnail ? (
+                <div className="relative h-48 w-full overflow-hidden bg-black/50 border-b border-white/10 shrink-0">
+                  <img 
+                    src={project.thumbnail} 
+                    alt={project.title} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent" />
+                  <div className={cn(
+                    "absolute top-4 left-4 w-10 h-10 rounded-xl bg-gradient-to-br flex items-center justify-center text-white shadow-lg",
+                    project.color
+                  )}>
+                    {project.icon}
+                  </div>
+                </div>
+              ) : null}
 
-              <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors line-clamp-2">
-                {project.title}
-              </h3>
-              
-              <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
-                {project.description}
-              </p>
+              <div className="p-8 flex-grow flex flex-col">
+                {!project.thumbnail && (
+                  <div className={cn(
+                    "w-14 h-14 rounded-2xl bg-gradient-to-br flex items-center justify-center text-white mb-6 shadow-lg shrink-0",
+                    project.color
+                  )}>
+                    {project.icon}
+                  </div>
+                )}
 
-              <div className="flex flex-wrap gap-2 mb-8">
-                {project.tags.map(tag => (
-                  <span key={tag} className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] font-bold text-gray-300 uppercase tracking-wider">
-                    {tag}
-                  </span>
-                ))}
-              </div>
+                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors line-clamp-2">
+                  {project.title}
+                </h3>
+                
+                <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
+                  {project.description}
+                </p>
 
-              <div className="flex items-center justify-between mt-auto pt-4 border-t border-white/5">
-                <button className="flex items-center gap-2 text-sm font-bold text-white group-hover:text-indigo-400 transition-colors">
-                  <Eye className="w-4 h-4" />
-                  View Details
-                </button>
-                <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-500 group-hover:text-white group-hover:bg-indigo-600 transition-all">
-                  <ExternalLink className="w-4 h-4" />
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {project.tags.map(tag => (
+                    <span key={tag} className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] font-bold text-gray-300 uppercase tracking-wider">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex items-center justify-between mt-auto pt-4 border-t border-white/5">
+                  <button className="flex items-center gap-2 text-sm font-bold text-white group-hover:text-indigo-400 transition-colors">
+                    <Eye className="w-4 h-4" />
+                    View Details
+                  </button>
+                  <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-500 group-hover:text-white group-hover:bg-indigo-600 transition-all">
+                    <ExternalLink className="w-4 h-4" />
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -437,8 +475,27 @@ export default function Projects() {
               {/* Modal Body */}
               <div className="p-8 sm:p-10 overflow-y-auto custom-scrollbar">
                 <div className="space-y-8">
-                  {/* Video Player */}
-                  {selectedProject.videoUrl && (
+                  {/* Video Player(s) */}
+                  {selectedProject.videoUrls && selectedProject.videoUrls.length > 0 ? (
+                    <div className="space-y-6">
+                      {selectedProject.videoUrls.map((videoUrl, idx) => (
+                        <div key={idx} className="space-y-2">
+                          <p className="text-xs font-bold text-gray-500 uppercase tracking-widest pl-1">
+                            Video Demonstration {idx + 1}
+                          </p>
+                          <div className="w-full aspect-video rounded-2xl overflow-hidden bg-black/50 border border-white/10 relative group">
+                            <iframe
+                              src={videoUrl}
+                              title={`${selectedProject.title} video ${idx + 1}`}
+                              className="w-full h-full"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            ></iframe>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : selectedProject.videoUrl ? (
                     <div className="w-full aspect-video rounded-2xl overflow-hidden bg-black/50 border border-white/10 relative group">
                       <iframe
                         src={selectedProject.videoUrl}
@@ -448,7 +505,7 @@ export default function Projects() {
                         allowFullScreen
                       ></iframe>
                     </div>
-                  )}
+                  ) : null}
 
                   {/* Images */}
                   {selectedProject.images && selectedProject.images.length > 0 && (
