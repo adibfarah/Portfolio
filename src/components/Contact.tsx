@@ -90,6 +90,20 @@ export default function Contact() {
               </div>
 
               <div className="flex items-center gap-6 group">
+                <div className="w-14 h-14 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-emerald-500 group-hover:bg-emerald-600 group-hover:text-white transition-all">
+                  <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.451 5.437 0 9.862-4.414 9.866-9.83.002-2.624-1.012-5.09-2.856-6.937C16.438 1.995 13.987 1.01 11.375 1.01 5.936 1.01 1.512 5.424 1.508 10.84c-.001 1.558.411 3.078 1.196 4.414l-.992 3.626 3.725-.976h.21zm12.336-6.634c-.211-.106-1.253-.618-1.447-.687-.194-.069-.336-.103-.477.106-.14.211-.544.687-.667.828-.123.14-.246.159-.458.053-.211-.106-.893-.329-1.702-1.05-.63-.561-1.055-1.254-1.178-1.466-.123-.211-.013-.326.093-.431.096-.095.211-.246.316-.37.106-.123.14-.211.211-.352.07-.14.035-.264-.017-.37-.053-.106-.477-1.147-.654-1.573-.172-.421-.344-.365-.477-.372-.123-.006-.264-.007-.406-.007-.142 0-.373.053-.568.264-.194.211-.741.723-.741 1.761 0 1.04.755 2.043.861 2.184.106.14 1.488 2.272 3.601 3.183.502.217.894.347 1.2.444.505.161.964.138 1.327.084.405-.06 1.253-.512 1.428-1.006.175-.494.175-.917.123-1.006-.052-.089-.194-.141-.406-.247z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">WhatsApp</div>
+                  <a href="https://wa.me/971522590098" target="_blank" rel="noopener noreferrer" className="text-xl font-bold text-white hover:text-emerald-400 transition-colors">
+                    +971 52 259 0098
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-6 group">
                 <div className="w-14 h-14 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-indigo-500 group-hover:bg-indigo-600 group-hover:text-white transition-all">
                   <MapPin className="w-6 h-6" />
                 </div>
@@ -110,6 +124,11 @@ export default function Contact() {
                 </a>
                 <a href="https://github.com/adibfarah" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-indigo-600 transition-all">
                   <Github className="w-5 h-5" />
+                </a>
+                <a href="https://wa.me/971522590098" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-emerald-600 transition-all" title="Chat on WhatsApp">
+                  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.451 5.437 0 9.862-4.414 9.866-9.83.002-2.624-1.012-5.09-2.856-6.937C16.438 1.995 13.987 1.01 11.375 1.01 5.936 1.01 1.512 5.424 1.508 10.84c-.001 1.558.411 3.078 1.196 4.414l-.992 3.626 3.725-.976h.21zm12.336-6.634c-.211-.106-1.253-.618-1.447-.687-.194-.069-.336-.103-.477.106-.14.211-.544.687-.667.828-.123.14-.246.159-.458.053-.211-.106-.893-.329-1.702-1.05-.63-.561-1.055-1.254-1.178-1.466-.123-.211-.013-.326.093-.431.096-.095.211-.246.316-.37.106-.123.14-.211.211-.352.07-.14.035-.264-.017-.37-.053-.106-.477-1.147-.654-1.573-.172-.421-.344-.365-.477-.372-.123-.006-.264-.007-.406-.007-.142 0-.373.053-.568.264-.194.211-.741.723-.741 1.761 0 1.04.755 2.043.861 2.184.106.14 1.488 2.272 3.601 3.183.502.217.894.347 1.2.444.505.161.964.138 1.327.084.405-.06 1.253-.512 1.428-1.006.175-.494.175-.917.123-1.006-.052-.089-.194-.141-.406-.247z"/>
+                  </svg>
                 </a>
               </div>
             </div>
