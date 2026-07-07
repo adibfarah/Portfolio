@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ExternalLink, Gamepad2, Cpu, Eye, Box, Trophy, Zap, Layers, Code2, Monitor, Smartphone, Glasses, Music, Layout, Car, Users, ShieldCheck, X, CheckCircle2, Sparkles, PlayCircle, Camera, PenTool, Video, Bot, UserCircle, Clock, Mic, Volume2, Brush, Move, Activity, Plane } from 'lucide-react';
+import { ExternalLink, Gamepad2, Cpu, Eye, Box, Trophy, Zap, Layers, Code2, Monitor, Smartphone, Glasses, Music, Layout, Car, Users, ShieldCheck, X, CheckCircle2, Sparkles, PlayCircle, Camera, PenTool, Video, Bot, UserCircle, Clock, Mic, Volume2, Brush, Move, Activity, Plane, Waves } from 'lucide-react';
 import { cn } from '@/src/lib/utils';
 
 interface Project {
@@ -31,6 +31,16 @@ const projects: Project[] = [
       'https://drive.google.com/file/d/1Qhkb2r8BR9M8GdcbomcOOOjRnNeKgbbS/preview',
       'https://drive.google.com/file/d/1oD-AtMe6xSB9wuLtf6bPIpajAG2KXjqi/preview'
     ],
+  },
+  {
+    title: "Ocean's Day WebApp",
+    description: "An incredibly optimized, high-performance 3D web application simulator where users select sea animals or plants to pledge for marine conservation.",
+    fullDescription: "Ocean's Day WebApp is a highly engaging 3D marine conservation simulator designed directly for the browser. Users can explore a beautifully crafted aquatic environment, select their favorite sea animals or plants, and commit to active pledges to protect our oceans. Built from the ground up to be ultra-performant and fully responsive, this lightweight web app guarantees buttery-smooth, interactive 60 FPS 3D rendering on both desktop and mobile devices.",
+    features: ['Interactive 3D Marine Environment', 'Species Selection & Pledge Tracking', 'Fully Responsive Design', 'Cross-Platform Mobile & Desktop Optimization'],
+    icon: <Waves className="w-6 h-6" />,
+    tags: ['WebGL', 'Three.js', 'React', 'Mobile Optimized'],
+    color: 'from-blue-500 to-emerald-500',
+    videoUrl: 'https://drive.google.com/file/d/1x9MSucjw3O4AWkVkYPiOJlJb5XA3nN14/preview',
   },
   {
     title: 'Smart Building VR',
